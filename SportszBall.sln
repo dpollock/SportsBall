@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportszBall.Web", "SportszBall.Web\SportszBall.Web.csproj", "{92E920BC-BE31-4B0E-BF48-A8F9FBB9CCE3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishScripts", "{59DA6F03-EE0A-481B-B7E1-D1AB7EA22CDE}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\AzureWebsitePublishModule.psm1 = PublishScripts\AzureWebsitePublishModule.psm1
+		PublishScripts\Publish-WebApplicationWebsite.ps1 = PublishScripts\Publish-WebApplicationWebsite.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{35EC55BD-0F29-4793-9297-711173C36ED9}"
+	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Configurations\SportszBallWeb-WAWS-dev.json = PublishScripts\Configurations\SportszBallWeb-WAWS-dev.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92E920BC-BE31-4B0E-BF48-A8F9FBB9CCE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E920BC-BE31-4B0E-BF48-A8F9FBB9CCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E920BC-BE31-4B0E-BF48-A8F9FBB9CCE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E920BC-BE31-4B0E-BF48-A8F9FBB9CCE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{35EC55BD-0F29-4793-9297-711173C36ED9} = {59DA6F03-EE0A-481B-B7E1-D1AB7EA22CDE}
+	EndGlobalSection
+EndGlobal
