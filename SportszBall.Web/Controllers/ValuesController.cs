@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Http.ModelBinding;
 
 namespace SportszBall.Web.Controllers
 {
@@ -24,8 +25,9 @@ namespace SportszBall.Web.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public MatchUp Post([ModelBinder]MatchUp matchUp)
         {
+            return matchUp;
         }
 
         // PUT api/values/5

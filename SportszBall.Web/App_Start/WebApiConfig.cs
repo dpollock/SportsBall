@@ -21,6 +21,9 @@ namespace SportszBall.Web
             config.EnableCors(corsAttr);
             // Web API routes
             config.MapHttpAttributeRoutes();
+         
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

@@ -31,14 +31,38 @@ namespace SportszBall.Web.Migrations
             //    );
             //
 
+            var roleStore = new RoleStore<IdentityRole>(context);
+            var roleManager = new RoleManager<IdentityRole>(roleStore);
+
+
+            var role = roleManager.FindByName("Admin");
+            if (role == null)
+            {
+                role = new IdentityRole("Admin");
+                roleManager.Create(role);
+            }
+
+             role = roleManager.FindByName("Player");
+            if (role == null)
+            {
+                role = new IdentityRole("Player");
+                roleManager.Create(role);
+            }
+
 
             if (!(context.Users.Any(u => u.UserName == "daniel@theironyard.com")))
             {
                 var userStore = new UserStore<ApplicationUser>(context);
                 var userManager = new UserManager<ApplicationUser>(userStore);
-                var userToInsert = new ApplicationUser { UserName = "daniel@theironyard.com", PhoneNumber = "0797697898" };
+                var userToInsert = new ApplicationUser { UserName = "daniel@theironyard.com", PhoneNumber = "5019601335" };
                 userManager.Create(userToInsert, "Password@123");
+                userManager.AddToRole(userToInsert.Id, "Admin");
+                userManager.AddToRole(userToInsert.Id, "Player");
             }
+
+          
+           
+
 
         }
     }

@@ -1,8 +1,10 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using SportszBall.Web.Migrations;
 
 namespace SportszBall.Web.Models
 {
@@ -20,11 +22,12 @@ namespace SportszBall.Web.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
+          public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
+
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
