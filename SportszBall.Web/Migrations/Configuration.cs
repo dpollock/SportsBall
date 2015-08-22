@@ -1,3 +1,7 @@
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using SportszBall.Web.Models;
+
 namespace SportszBall.Web.Migrations
 {
     using System;
@@ -9,7 +13,7 @@ namespace SportszBall.Web.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(SportszBall.Web.Models.ApplicationDbContext context)
@@ -26,6 +30,16 @@ namespace SportszBall.Web.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+
+            if (!(context.Users.Any(u => u.UserName == "daniel@theironyard.com")))
+            {
+                var userStore = new UserStore<ApplicationUser>(context);
+                var userManager = new UserManager<ApplicationUser>(userStore);
+                var userToInsert = new ApplicationUser { UserName = "daniel@theironyard.com", PhoneNumber = "0797697898" };
+                userManager.Create(userToInsert, "Password@123");
+            }
+
         }
     }
 }
