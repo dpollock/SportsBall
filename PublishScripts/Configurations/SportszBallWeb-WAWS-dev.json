@@ -1,13 +1,13 @@
 {
     "environmentSettings": {
         "webSite": {
-            "name": "SportszBallWeb",
+            "name": "SportsBallWeb",
             "location": "East US"
         },
         "databases": [
             {
                 "connectionStringName": "DefaultConnection",
-                "databaseName": "SportszBallWeb_db",
+                "databaseName": "SportsBallWeb_db",
                 "serverName": "",
                 "user": "sportsball",
                 "password": "",

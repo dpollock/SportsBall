@@ -1,4 +1,4 @@
-namespace SportszBall.Web.Areas.HelpPage.ModelDescriptions
+namespace SportsBall.Web.Areas.HelpPage.ModelDescriptions
 {
     public class CollectionModelDescription : ModelDescription
     {

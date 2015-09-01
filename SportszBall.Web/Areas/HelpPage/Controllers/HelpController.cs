@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using SportszBall.Web.Areas.HelpPage.ModelDescriptions;
-using SportszBall.Web.Areas.HelpPage.Models;
+using SportsBall.Web.Areas.HelpPage.ModelDescriptions;
+using SportsBall.Web.Areas.HelpPage.Models;
 
-namespace SportszBall.Web.Areas.HelpPage.Controllers
+namespace SportsBall.Web.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

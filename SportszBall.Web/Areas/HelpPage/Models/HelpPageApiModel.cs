@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using SportszBall.Web.Areas.HelpPage.ModelDescriptions;
+using SportsBall.Web.Areas.HelpPage.ModelDescriptions;
 
-namespace SportszBall.Web.Areas.HelpPage.Models
+namespace SportsBall.Web.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

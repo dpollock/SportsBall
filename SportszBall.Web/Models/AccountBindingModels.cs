@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace SportszBall.Web.Models
+namespace SportsBall.Web.Models
 {
     // Models used as parameters to AccountController actions.
 

@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Hangfire;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using SportszBall.Web.Providers;
-using SportszBall.Web.Models;
+using SportsBall.Web.Providers;
+using SportsBall.Web.Models;
 
-namespace SportszBall.Web
+namespace SportsBall.Web
 {
     public partial class Startup
     {
@@ -22,6 +24,7 @@ namespace SportszBall.Web
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
         public void ConfigureAuth(IAppBuilder app)
         {
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
             // Configure the db context and user manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
@@ -42,6 +45,7 @@ namespace SportszBall.Web
                 AllowInsecureHttp = true
             };
 
+            
             // Enable the application to use bearer tokens to authenticate users
             app.UseOAuthBearerTokens(OAuthOptions);
 
@@ -63,6 +67,14 @@ namespace SportszBall.Web
             //    ClientId = "",
             //    ClientSecret = ""
             //});
+
+            GlobalConfiguration.Configuration.UseSqlServerStorage("DefaultConnection");
+
+            app.UseHangfireDashboard();
+            app.UseHangfireServer();
+
+           
+
         }
     }
 }

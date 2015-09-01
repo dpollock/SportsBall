@@ -1,4 +1,4 @@
-namespace SportszBall.Web.Migrations
+namespace SportsBall.Web.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

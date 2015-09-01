@@ -1,22 +1,22 @@
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using SportszBall.Web.Models;
+using SportsBall.Web.Models;
 
-namespace SportszBall.Web.Migrations
+namespace SportsBall.Web.Migrations
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<SportszBall.Web.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<SportsBall.Web.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(SportszBall.Web.Models.ApplicationDbContext context)
+        protected override void Seed(SportsBall.Web.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

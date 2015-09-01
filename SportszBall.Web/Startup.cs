@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(SportszBall.Web.Startup))]
+[assembly: OwinStartup(typeof(SportsBall.Web.Startup))]
 
-namespace SportszBall.Web
+namespace SportsBall.Web
 {
     public partial class Startup
     {

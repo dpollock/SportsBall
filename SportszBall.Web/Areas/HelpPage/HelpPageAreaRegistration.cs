@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace SportszBall.Web.Areas.HelpPage
+namespace SportsBall.Web.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace SportszBall.Web.Models
+namespace SportsBall.Web.Models
 {
     // Models returned by AccountController actions.
 

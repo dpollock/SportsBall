@@ -1,6 +1,6 @@
 using System;
 
-namespace SportszBall.Web.Areas.HelpPage.ModelDescriptions
+namespace SportsBall.Web.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

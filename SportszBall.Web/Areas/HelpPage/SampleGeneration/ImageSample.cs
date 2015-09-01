@@ -1,6 +1,6 @@
 using System;
 
-namespace SportszBall.Web.Areas.HelpPage
+namespace SportsBall.Web.Areas.HelpPage
 {
     /// <summary>
     /// This represents an image sample on the help page. There's a display template named ImageSample associated with this class.

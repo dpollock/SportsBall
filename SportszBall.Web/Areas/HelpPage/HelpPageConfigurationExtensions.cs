@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using SportszBall.Web.Areas.HelpPage.ModelDescriptions;
-using SportszBall.Web.Areas.HelpPage.Models;
+using SportsBall.Web.Areas.HelpPage.ModelDescriptions;
+using SportsBall.Web.Areas.HelpPage.Models;
 
-namespace SportszBall.Web.Areas.HelpPage
+namespace SportsBall.Web.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

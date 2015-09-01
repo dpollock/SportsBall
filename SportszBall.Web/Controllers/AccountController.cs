@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -13,16 +14,18 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using SportszBall.Web.Models;
-using SportszBall.Web.Providers;
-using SportszBall.Web.Results;
+using Newtonsoft.Json;
+using SportsBall.Web.Models;
+using SportsBall.Web.Providers;
+using SportsBall.Web.Results;
 
-namespace SportszBall.Web.Controllers
+namespace SportsBall.Web.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [RoutePrefix("api/Account")]
     public class AccountController : ApiController
     {
+
         private const string LocalLoginProvider = "Local";
         private ApplicationUserManager _userManager;
 
@@ -264,7 +267,8 @@ namespace SportszBall.Web.Controllers
                 ClaimsIdentity cookieIdentity = await user.GenerateUserIdentityAsync(UserManager,
                     CookieAuthenticationDefaults.AuthenticationType);
 
-                AuthenticationProperties properties = ApplicationOAuthProvider.CreateProperties(user.UserName);
+                List<Claim> roles = oAuthIdentity.Claims.Where(c => c.Type == ClaimTypes.Role).ToList();
+                AuthenticationProperties properties = ApplicationOAuthProvider.CreateProperties(user.UserName, string.Join(",",roles.Select(x => x.Value)));
                 Authentication.SignIn(properties, oAuthIdentity, cookieIdentity);
             }
             else

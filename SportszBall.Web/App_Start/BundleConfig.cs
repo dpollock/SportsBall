@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace SportszBall.Web
+namespace SportsBall.Web
 {
     public class BundleConfig
     {

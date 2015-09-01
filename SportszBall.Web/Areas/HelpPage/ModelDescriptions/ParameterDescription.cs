@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace SportszBall.Web.Areas.HelpPage.ModelDescriptions
+namespace SportsBall.Web.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterDescription
     {
