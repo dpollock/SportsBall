@@ -2,7 +2,6 @@ using Newtonsoft.Json;
 
 namespace SportsBall.Web.Controllers
 {
-    [JsonObject(Title = "matchup")]
     public class Matchup
     {
         public int Id { get; set; }

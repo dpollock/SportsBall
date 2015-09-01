@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using Microsoft.Owin.Security.OAuth;
@@ -20,12 +21,10 @@ namespace SportsBall.Web
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
-           
+
+            
             // Web API routes
             config.MapHttpAttributeRoutes();
-
-            GlobalConfiguration.Configuration.Formatters.Insert(0, new MyEmberJsonMediaTypeFormatter());
-
             
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
