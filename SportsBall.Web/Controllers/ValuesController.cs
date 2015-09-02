@@ -9,7 +9,7 @@ namespace SportsBall.Web.Controllers
     public class ValuesController : ApiController
     {
 
-        [Route("api/matchup")]
+        [Route("api/matchups")]
         [HttpGet]
         [Authorize]
         public IEnumerable<Matchup> GetMatchUp()
@@ -33,7 +33,7 @@ namespace SportsBall.Web.Controllers
         }
 
 
-        [Route("api/matchup/{id}")]
+        [Route("api/matchups/{id}")]
         [HttpGet]
         public Matchup GetMatchUp(int id)
         {
@@ -45,14 +45,14 @@ namespace SportsBall.Web.Controllers
             };
         }
 
-        [Route("api/matchup/{id}")]
+        [Route("api/matchups/{id}")]
         [HttpPost]
         public Matchup PostCustomer(Matchup matchup)
         {
                 return matchup;
         }
 
-        [Route("api/matchup/{id}")]
+        [Route("api/matchups/{id}")]
         [HttpDelete]
         public void DeleteMatchUp(Matchup matchup)
         {
