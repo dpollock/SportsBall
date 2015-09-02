@@ -15,8 +15,8 @@ namespace SportsBall.Web
     {
         public static void Register(HttpConfiguration config)
         {
-            ICorsPolicyProvider corsAttr = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(corsAttr);
+            //ICorsPolicyProvider corsAttr = new EnableCorsAttribute("*", "*", "*");
+            //config.EnableCors(corsAttr);
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();
