@@ -11,6 +11,7 @@ namespace SportsBall.Web.Controllers
 
         [Route("api/matchup")]
         [HttpGet]
+        [Authorize]
         public IEnumerable<Matchup> GetMatchUp()
         {
             var results = new List<Matchup>();
@@ -46,9 +47,16 @@ namespace SportsBall.Web.Controllers
 
         [Route("api/matchup/{id}")]
         [HttpPost]
-        public int PostCustomer(Matchup matchup)
+        public Matchup PostCustomer(Matchup matchup)
         {
-            return matchup.Id;
+                return matchup;
+        }
+
+        [Route("api/matchup/{id}")]
+        [HttpDelete]
+        public void DeleteMatchUp(Matchup matchup)
+        {
+            return;
         }
     }
 }

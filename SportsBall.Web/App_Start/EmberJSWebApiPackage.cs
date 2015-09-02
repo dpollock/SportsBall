@@ -11,10 +11,8 @@ using SportszBall.Web.Models;
 namespace SportsBall.Web.App_Start
 {
 
-    public static class EmberJSWebApiPackage
-    {
-        public static void PostStart()
-        {
+    public static class EmberJSWebApiPackage{
+        public static void PostStart(){
             var formatters = GlobalConfiguration.Configuration.Formatters;
             formatters.Insert(0, new EmberJsonMediaTypeFormatter());
             var jsonFormatter = formatters.OfType<EmberJsonMediaTypeFormatter>().First();

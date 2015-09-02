@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using EmberJS.WebAPI;
 using Humanizer;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace SportszBall.Web.Models
 {
@@ -52,7 +53,7 @@ namespace SportszBall.Web.Models
                 {
                     var json = reader.ReadToEnd();
                     var serializer = new EmberJsonSerializer();
-                    var deserialized = serializer.Deserialize(json);
+                    var deserialized = serializer.Deserialize(json, root);
                     return deserialized.ToObject(type);
                 }
             }
@@ -115,6 +116,15 @@ namespace SportszBall.Web.Models
             }
 
             return type;
+        }
+    }
+
+    public class EmberJsonSerializer
+    {
+        public virtual JToken Deserialize(string json, string root)
+        {
+            var parsedJson = JObject.Parse(json);
+            return parsedJson.SelectToken(root);
         }
     }
 }
